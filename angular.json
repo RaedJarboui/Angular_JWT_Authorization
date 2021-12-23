@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular-JWT-Authorization"
+    }
+  },
+  "defaultProject": "Angular-JWT-Authorization",
+  "cli": {
+    "analytics": false
+  }
 }
