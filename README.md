@@ -10,13 +10,19 @@ SignIn :
 ![a2](https://user-images.githubusercontent.com/48753442/147360113-79b5e7db-d4f3-41ef-b78c-d3449de5bf7f.PNG)
 Profile :
 ![a3](https://user-images.githubusercontent.com/48753442/147360129-9bc780c6-814b-43ef-b657-cea3fb04995d.PNG)
+
 list Users ( only authorized to Admin Role ) :
 ![a4](https://user-images.githubusercontent.com/48753442/147360155-8d3e72d7-feec-4c41-b8f8-04a2bf263dd2.PNG)
+
 detail User ( only authorized to Admin Role ):
 ![a5](https://user-images.githubusercontent.com/48753442/147360183-ec44688a-01f2-44b6-bd5b-4d0383da1d87.PNG)
-simple user Profile (click Change Role Button in order to change your local Role to Admin , then login again with same parameteres, the User (named user will have admin role) :
+simple user Profile (click Change Role Button
+in order to change your local Role to Admin ,
+then login again with same parameteres,
+the User (named user will have admin role) :
 ![a6](https://user-images.githubusercontent.com/48753442/147360213-004981cd-e348-43d0-ab47-e8a62ae62de2.PNG)
-unathorization (user cannot access to certain pages who requires only Admin Role , look at app.module.ts) :
+unathorization (user cannot access to certain
+pages who requires only Admin Role , look at app.module.ts) :
 ![a7](https://user-images.githubusercontent.com/48753442/147360254-6265ab02-ecf5-4bb7-a55e-dea11679cd71.PNG)
 
 
