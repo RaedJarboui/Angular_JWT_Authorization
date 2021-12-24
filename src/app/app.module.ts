@@ -13,6 +13,9 @@ import { UnathorizedComponent } from './unathorized/unathorized.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+import { AuthGuard } from './guards/AuthGuard';
+import { Role } from './models/role';
+//import { Role } from './models/Role';
 
 
 const routes: Routes = [
@@ -27,13 +30,15 @@ const routes: Routes = [
 
   { path: 'admin',
     component: AdminComponent,
+    canActivate: [AuthGuard],
+    data: {roles: [Role.Admin]}
     },
   
 
   { path: 'detail/:id',
     component: DetailComponent,
     }
-  ,//detail/1
+  ,
 
   {path: '404', component: NotfoundComponent},
   {path: '401', component: UnathorizedComponent},
