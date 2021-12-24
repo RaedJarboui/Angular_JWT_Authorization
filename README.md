@@ -24,6 +24,8 @@ the User (named user will have admin role) :
 unathorization (user cannot access to certain
 pages who requires only Admin Role , look at app.module.ts) :
 ![a7](https://user-images.githubusercontent.com/48753442/147360254-6265ab02-ecf5-4bb7-a55e-dea11679cd71.PNG)
+Also the application containes Authorization check : access token can refreshed automatically after expiration using Interceptor in angular,
+The user should not login many times after the token expiration.
 
 
 
