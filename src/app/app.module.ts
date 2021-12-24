@@ -15,6 +15,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AuthGuard } from './guards/AuthGuard';
 import { Role } from './models/role';
+import { authInterceptorProviders } from './interceptors/auth.interceptor';
 //import { Role } from './models/Role';
 
 
@@ -26,7 +27,9 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
 
   { path: 'profile',
-    component: ProfileComponent},
+    component: ProfileComponent,
+    canActivate: [AuthGuard],
+    data: {roles: [Role.Admin, Role.User]}},
 
   { path: 'admin',
     component: AdminComponent,
@@ -37,6 +40,7 @@ const routes: Routes = [
 
   { path: 'detail/:id',
     component: DetailComponent,
+    data: {roles: [Role.Admin]}
     }
   ,
 
@@ -65,7 +69,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
 
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
